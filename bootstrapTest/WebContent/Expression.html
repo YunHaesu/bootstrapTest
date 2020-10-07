@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function checkEmail(element, msg) {
+		var exp = /^\w+@\w+\.\w+(\.\w+)?$/;
+		if (element.value.match(exp)) {
+			return true;
+
+		} else {
+			alert(msg);
+			element.focus();
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	이메일:
+	<input type = "text" id = "email"/>
+	<input type = "button" value = "전송" onclick="checkEmail(document.getElemetById('email'), '이메일이 아닙니다.')"/>
+
+</body>
+</html>
