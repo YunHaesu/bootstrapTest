@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("*").css("font-size", "20px");
+	});
+
+	$(function() {
+		$(".html").css("background", "red").css("color", "white");
+		$("li:first").css("fontSize", "100px").css("lineHeight", "25px");
+		$("li:first").css({
+			"fontSize" : "30px",
+			"lineHeight" : "25px"
+		});
+		$("li:eq(1)").css({
+			"background" : "yellow"
+		});
+		$("li").eq(2).css({
+			"background" : "purple"
+		});
+		$("li:gt(2)").css({
+			"background" : "skyblue"
+		});
+		$("li:lt(2)").css('color', 'blue');
+
+		$(".html").html("<p>html</p>"); //text는 글자를 그냥 출력
+		$(".blank").text("빈칸");
+		$(".blank").empty().remove(); // empty는 비우는것 remove는 삭제하는것.
+		$("#tutorial").prepend("<li>추가태그1</li>"); // 태그선택자는 1 아이디 선택자는 1000 .클래스는 100
+		$("#tutorial").prepend("<li>추가태그2</li>");
+		$("#tutorial").after("<div>div 추가 </div>");
+		$(".css3").prependTo("#tutorial"); //append와 prepend는 추가 prependTo 와 appendTo는 이동
+		$(".css3").clone().prependTo("#tutorial"); // 복사해서 이동
+	});
+</script>
+<style type="text/css">
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1em;
+	font-size: 1em;
+	background: #555;
+	color: #000;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	margin-top: 20px;
+}
+
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+.container {
+	margin-top: 35px;
+}
+</style>
+
+</head>
+<body>
+	<h1 class="title">basic :: jQuery basic study</h1>
+	<div class="container">
+		<ul id="tutorial">
+			<li class="html">html</li>
+			<li class="css">css</li>
+			<li class="css3">css3</li>
+			<li class="javascript">javascript</li>
+			<li class="jquery"><p>jquery</p></li>
+			<li class="blank">blank</li>
+		</ul>
+		<p id="portfolio">protfolio</p>
+	</div>
+</body>
+</html>

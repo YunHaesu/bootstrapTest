@@ -1,0 +1,37 @@
+hide([duration],[callback]); 둘다 생략가능.
+show([duration],[callback]); 둘다 생략가능.
+
+opacity
+fadeIn() 0~ 1로 나타나게 한다.
+fadeOut() 0~ 1로 나타나게 한다.
+fadeToggle() 0~ 1로 나타나게 한다.
+
+fadeTo() 값으로 나타나게 한다.
+duration opacity callback
+		 -> 소수점으로 적어야한다.
+display none이 되야 없어지는것이다. 
+
+
+animate()
+.animate(properties [, duration] [, easing] [, callback]);
+properties <- 무조건 들어가야한다. css 형식 속성을 넣어줘야한다 ex)padding 어떠한 값 all
+easing <- 에니메이션 효과를 정함.
+callback <- 무조건 들어감.
+
+stop(현재 상황을 종료할껀가? , 마지막 상황을 종료할껀가?)
+
+
+javascript의 easing임으로 animate에서 사용해야한다.
+
+
+
+@keyframes -> from 과 to
+
+animation
+name
+duration
+timing function linear
+delay
+iteration-count
+
+-> animation :test 3s linear 1s 3;
