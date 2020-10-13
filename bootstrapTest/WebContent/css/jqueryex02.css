@@ -111,7 +111,7 @@ nav>.menuBox>li>a {
 
 nav>.menuBox>li>a:hover {
 	text-decoration: underline;
-	font-size: 600;
+	font-weight: 600;
 }
 
 .overlay {

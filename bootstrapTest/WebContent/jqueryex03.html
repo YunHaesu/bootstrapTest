@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0,shrink-to-fit=no" />
+<title>모바일 메뉴 예제</title>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/jqueryex03.css" />
+<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/jqueryex03.js"></script>
+</head>
+<body>
+	<button>버튼1</button>
+	<div>
+		<a href="http://www.daum.net">다음으로 이동</a>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			$("a").click(function(e) {
+				e.preventDefault(); // 더 많이 사용.
+				alert("경고창");
+				return false;
+
+			});
+
+// 			$("button").click(function() {
+// 				$("a").click(function(e) {
+// 					return true;
+// 				});
+// 			});
+
+// 			$("button").click(function () {
+// 				$("a").originalEvent();
+// 			});
+		});
+	</script>
+</body>
+</html>
