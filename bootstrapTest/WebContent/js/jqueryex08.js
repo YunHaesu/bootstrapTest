@@ -1,5 +1,6 @@
 /**
- * 
+ *  appendTo -> 뒤로 집어넣기
+	prependTo -> 앞으로 집어넣기
  */
 $(function() {
 	var moving = false;
@@ -26,6 +27,7 @@ $(function() {
 		if (!moving) {
 			moving = true;
 			$(".gallery li:last").clone().prependTo(".gallery");
+			// $(""gallery"").css({left: "-=90px"});
 			$(".gallery").stop().animate({ left: "-=90px" }, 0);
 			$(".gallery").stop().animate({ left: "+=90px" }, 400, function() {
 				moving = false;
